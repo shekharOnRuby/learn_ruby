@@ -8,9 +8,17 @@ end
 
 
 def sum(arr)
-	total_sum=0
-	arr.each do |i|
-		total_sum+=i
-	end
-	total_sum
+	arr.inject(0,:+)
+end
+
+def multiply(arr)
+	arr.inject(1, :*)
+end
+
+def power(a,b)
+	a ** b
+end
+
+def factorial(num)
+	(1..(num.zero? ? 1: num)).inject(:*)
 end
