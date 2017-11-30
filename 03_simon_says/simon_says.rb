@@ -17,3 +17,11 @@ def start_of_word(some_string, position)
  	some_string.slice(0,position)
 end
 
+def first_word(some_string)
+	pos = some_string.index(/\s/)
+	some_string.slice!(0,pos)	
+end
+
+def titleize(some_string)
+	some_string.split.map(&:capitalize).join(' ')
+end
