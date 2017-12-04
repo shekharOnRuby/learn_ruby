@@ -23,5 +23,13 @@ def first_word(some_string)
 end
 
 def titleize(some_string)
-	some_string.split.map(&:capitalize).join(' ')
+	little_words = ["the","and","or", "over"]
+	little_words_titelize = ["The"]
+ 	some_string.split.first
+	some_string.split.map do |word|
+		(word.eql?(some_string.split.first) && some_string.split.first.eql?("the"))? word.capitalize! : little_words.include?(word) ? word : word.capitalize!
+	end.join(' ')
+
+	 
+
 end
